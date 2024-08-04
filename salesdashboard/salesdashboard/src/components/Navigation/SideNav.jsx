@@ -1,6 +1,6 @@
 function SideNav() {
   return (
-    <nav className="nav d-flex flex-column flex-shrink-0 p-1 text-white bg-dark w-100 md-w-75" style={{height:"100vh"}}>
+    <nav className="nav d-flex flex-column flex-shrink-0 p-1 text-white bg-dark w-100 md-w-75" style={{ height: "100vh" }}>
       <a
         href="/home"
         className="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-white text-decoration-none"
@@ -20,14 +20,14 @@ function SideNav() {
 
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
-          <a className="nav-link align-middle -sm-0" href="#">
+          <a className="nav-link align-middle -sm-0" href="/report">
             <span className="ms-1 d-sm-inline ">Report</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/product">
             <span className="ms-1 d-sm-inline">Product</span>
           </a>
         </li>
@@ -48,7 +48,7 @@ function SideNav() {
       </ul>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <a className="nav-link" href="/customers">
             <span className="ms-1 d-sm-inline">Customers</span>
           </a>
         </li>
@@ -75,47 +75,7 @@ function SideNav() {
         </li>
       </ul>
       <hr />
-      <div className="btn-group">
-        <button
-        className="btn btn-secondary btn-sm dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        >
-          <img
-            src=""
-            alt=""
-            width="32"
-            height="32"
-            className="rounded-circle me-2"
-          />
-          <strong>S.Mthethwa</strong>
-        </button>
-        <ul
-          className="dropdown-menu"
-        >
-          <li>
-            <a className="dropdown-item" href="#">
-              New Customer
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              New Product
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Generate Invoice
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Log out
-            </a>
-          </li>
-        </ul>
-      </div>
+
     </nav>
   );
 }
