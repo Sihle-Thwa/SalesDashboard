@@ -3,7 +3,7 @@ function SCardOne() {
     return (
         <div className="container p-0">
             <div className="row">
-                <div className="col-md-3 col-sm-2">
+                <div className="col">
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Total Order</h5>
