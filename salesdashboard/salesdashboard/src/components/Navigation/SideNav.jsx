@@ -74,7 +74,6 @@ function SideNav() {
           </a>
         </li>
       </ul>
-      <hr />
 
     </nav>
   );

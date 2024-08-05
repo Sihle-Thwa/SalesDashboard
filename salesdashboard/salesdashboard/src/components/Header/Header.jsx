@@ -3,7 +3,7 @@ import { BsBell } from "react-icons/bs";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white position-sticky">
       <a className="navbar-brand" href="/dashboard">
         LOGO
       </a>

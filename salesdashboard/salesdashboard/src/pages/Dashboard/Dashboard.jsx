@@ -24,10 +24,21 @@ function Dashboard() {
         </div>
       </div>
       <hr />
-
-      <SCardOne />
-
-
+      <div className="row p-3 align-items-center">
+        <div className="">
+        <SCardOne />
+        </div>
+      </div>
+      <div className="row p-3 align-items-center">
+        <div className="">
+        <SCardOne />
+        </div>
+      </div>
+      <div className="row p-3 align-items-center">
+        <div className="">
+        <SCardOne />
+        </div>
+      </div>
     </div>
   );
 }
