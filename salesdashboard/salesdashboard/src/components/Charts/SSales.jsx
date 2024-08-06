@@ -1,62 +1,68 @@
-import chart from 'chart.js'
-// Get the context of the canvas element
-const ctx = document.getElementById('salesChart').getContext('2d');
+import {
+  LineChart,
+  Line,
+  Legend,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
 
-// Define the days of the week
-const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const data = [
+  {
+    day: "Monday",
+    TotalSales: 4000,
+  
+  },
+  {
+    day: "Tuesday",
+    TotalSales: 3000,
+    
+  },
+  {
+    day: "Wednesday",
+    TotalSales: 2000,
+   
+  },
+  {
+    day: "Thursday",
+    TotalSales: 2780,
+    
+  },
+  {
+    day: "Friday",
+    TotalSales: 1890,
+    
+  },
+  {
+    day: "Saturday",
+    TotalSales: 2390,
 
-// Generate random sales data for each day
-const salesData = daysOfWeek.map(() => Math.floor(Math.random() * 100));
+  },
+  {
+    day: "Sunday",
+    TotalSales: 2390,
 
-// Create the chart
-const chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: daysOfWeek,
-        datasets: [{
-            label: 'Sales',
-            data: salesData,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 99, 132, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'Sales Chart'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+  },
+];
+
 function SSales() {
-
-    return (
-
-        <canvas id="salesChart"><chart /></canvas>
-    )
+  return (
+    <LineChart
+      width={730}
+      height={250}
+      data={data}
+      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="day" />
+      <YAxis />
+      <Tooltip />
+      <Legend />
+    
+      <Line type="monotone" dataKey="TotalSales" stroke="#82ca9d" />
+    </LineChart>
+  );
 }
 
-export default SSales
+export default SSales;

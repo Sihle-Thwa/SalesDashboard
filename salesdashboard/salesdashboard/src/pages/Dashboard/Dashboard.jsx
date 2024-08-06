@@ -42,10 +42,10 @@ function Dashboard() {
           <SCardOne />
         </div>
 
-        <div className="row p-2">
-          <div className="col-6">
+        <div className="row">
+          
             <SSales />
-          </div>
+          
         </div>
       </div>
     </>
