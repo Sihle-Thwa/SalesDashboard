@@ -1,3 +1,5 @@
+import { BsColumns, BsFileEarmarkText, BsGear, BsGraphUp, BsPc, BsPeople, BsQuestion, BsSpeedometer, BsTicket } from "react-icons/bs";
+
 function SideNav() {
   return (
     <nav className="nav d-flex flex-column flex-shrink-0 p-1 text-white bg-dark w-100 md-w-75" style={{ height: "100vh" }}>
@@ -5,15 +7,16 @@ function SideNav() {
         href="/home"
         className="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-white text-decoration-none"
       >
-        <span>Sales4U</span>
+        <h1>Sales4U</h1>
       </a>
       <hr />
 
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/dashboard">
-            <span className="ms-1 d-sm-inline"></span>
-            Dashboard
+            <BsColumns />
+            <span className="ms-1 d-sm-inline d-none">Dashboard</span>
+
           </a>
         </li>
       </ul>
@@ -21,56 +24,64 @@ function SideNav() {
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link align-middle -sm-0" href="/report">
-            <span className="ms-1 d-sm-inline ">Report</span>
+            <BsFileEarmarkText />
+            <span className="ms-1 d-sm-inline d-none">Report</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="/product">
-            <span className="ms-1 d-sm-inline">Product</span>
+            <BsTicket />
+            <span className="ms-1 d-sm-inline d-none">Product</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <span className="ms-1 d-sm-inline">Analytics</span>
+            <BsGraphUp />
+            <span className="ms-1 d-sm-inline d-none">Analytics</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <span className="ms-1 d-sm-inline">Performance</span>
+            <BsSpeedometer />
+            <span className="ms-1 d-sm-inline d-none">Performance</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
           <a className="nav-link" href="/customers">
-            <span className="ms-1 d-sm-inline">Customers</span>
+            <BsPeople />
+            <span className="ms-1 d-sm-inline d-none">Customers</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <span className="ms-1 d-sm-inline">Help center</span>
+            <BsQuestion />
+            <span className="ms-1 d-sm-inline d-none">Help center</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <span className="ms-1 d-sm-inline">Settings</span>
+            <BsGear />
+            <span className="ms-1 d-sm-inline d-none">Settings</span>
           </a>
         </li>
       </ul>
       <ul className="nav nav-pills flex-column mb-1">
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <span className="ms-1 d-sm-inline">Logout</span>
+            <BsPc />
+            <span className="ms-1 d-sm-inline d-none">Logout</span>
           </a>
         </li>
       </ul>
