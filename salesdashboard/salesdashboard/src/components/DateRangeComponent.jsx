@@ -1,11 +1,13 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { DateRange } from 'react-date-range';
+import { Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
 
 import format from 'date-fns/format';
 import { addDays } from 'date-fns';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const DateRangeComponent = () => {
   const [range, setRange] = useState([
@@ -16,12 +18,12 @@ const DateRangeComponent = () => {
     },
   ]);
 
-  const [open, setOpen] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const refOne = useRef(null);
 
-  const handleToggle = useCallback(() => {
-    setOpen((open) => !open);
+  const toggleModal = useCallback(() => {
+    setModal((modal) => !modal);
   }, []);
 
   const handleRangeChange = useCallback((ranges) => {
@@ -30,13 +32,13 @@ const DateRangeComponent = () => {
 
   const handleEscape = useCallback((e) => {
     if (e.key === 'Escape') {
-      setOpen(false);
+      setModal(false);
     }
   }, []);
 
   const handleClickOutside = useCallback((e) => {
     if (refOne.current && !refOne.current.contains(e.target)) {
-      setOpen(false);
+      setModal(false);
     }
   }, [refOne]);
 
@@ -56,11 +58,11 @@ const DateRangeComponent = () => {
         value={`${format(range[0].startDate, 'dd/MM/yyyy')} to ${format(range[0].endDate, 'dd/MM/yyyy')}`}
         readOnly
         className="inputBox"
-        onClick={handleToggle}
+        onClick={toggleModal}
       />
 
-      <div ref={refOne}>
-        {open && (
+      <Modal isOpen={modal} toggle={toggleModal} ref={refOne}>
+        <ModalBody>
           <DateRange
             onChange={handleRangeChange}
             editableDateInputs={true}
@@ -70,8 +72,13 @@ const DateRangeComponent = () => {
             direction="horizontal"
             className="calendarElement"
           />
-        )}
-      </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggleModal}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 };
