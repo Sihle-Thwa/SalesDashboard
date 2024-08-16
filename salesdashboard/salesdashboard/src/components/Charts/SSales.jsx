@@ -7,60 +7,24 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-
-const data = [
-  {
-    day: "Monday",
-    TotalSales: 4000,
-  
-  },
-  {
-    day: "Tuesday",
-    TotalSales: 3000,
-    
-  },
-  {
-    day: "Wednesday",
-    TotalSales: 2000,
-   
-  },
-  {
-    day: "Thursday",
-    TotalSales: 2780,
-    
-  },
-  {
-    day: "Friday",
-    TotalSales: 1890,
-    
-  },
-  {
-    day: "Saturday",
-    TotalSales: 2390,
-
-  },
-  {
-    day: "Sunday",
-    TotalSales: 2390,
-
-  },
-];
+import data from "../../Data/Sales.json";
 
 function SSales() {
   return (
     <LineChart
-      width={730}
-      height={250}
-      data={data}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      width={600}
+      height={300}
+      data={data} // access the array of objects within the data object
+      margin={{ top: 20, right: 0, left: 0, bottom: 0 }}
+      padding={0}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="day" />
-      <YAxis />
+      <YAxis dataKey="TotalSales" />
       <Tooltip />
       <Legend />
-    
-      <Line type="monotone" dataKey="TotalSales" stroke="#82ca9d" />
+
+      <Line type="monotone" dataKey="TotalSales" stroke="#750505" />
     </LineChart>
   );
 }

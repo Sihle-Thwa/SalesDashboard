@@ -1,0 +1,44 @@
+[
+    {
+        "day": "Monday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    },
+    {
+        "day": "Tuesday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    },
+    {
+        "day": "Wednesday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    },
+    {
+        "day": "Thursday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    },
+    {
+        "day": "Friday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    },
+    {
+        "day": "Saturday",
+        "ProductA": 4000,
+        "ProductB": 2400,
+        "ProductC": 1500,
+        "ProductD": 3000
+    }
+]

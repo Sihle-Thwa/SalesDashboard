@@ -1,0 +1,26 @@
+[
+    {
+        "day": "Monday",
+        "TotalSales": 1000
+    },
+    {
+        "day": "Tuesday",
+        "TotalSales": 3500
+    },
+    {
+        "day": "Wednesday",
+        "TotalSales": 2500
+    },
+    {
+        "day": "Thursday",
+        "TotalSales": 6000
+    },
+    {
+        "day": "Friday",
+        "TotalSales": 7000
+    },
+    {
+        "day": "Saturday",
+        "TotalSales": 1900
+    }
+]
