@@ -1,44 +1,44 @@
 [
     {
         "day": "Monday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 1234,
+        "ProductB": 567,
+        "ProductC": 890,
+        "ProductD": 456
     },
     {
         "day": "Tuesday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 901,
+        "ProductB": 234,
+        "ProductC": 678,
+        "ProductD": 109
     },
     {
         "day": "Wednesday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 345,
+        "ProductB": 678,
+        "ProductC": 234,
+        "ProductD": 567
     },
     {
         "day": "Thursday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 789,
+        "ProductB": 123,
+        "ProductC": 456,
+        "ProductD": 890
     },
     {
         "day": "Friday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 567,
+        "ProductB": 901,
+        "ProductC": 109,
+        "ProductD": 234
     },
     {
         "day": "Saturday",
-        "ProductA": 4000,
-        "ProductB": 2400,
-        "ProductC": 1500,
-        "ProductD": 3000
+        "ProductA": 456,
+        "ProductB": 789,
+        "ProductC": 567,
+        "ProductD": 678
     }
 ]
