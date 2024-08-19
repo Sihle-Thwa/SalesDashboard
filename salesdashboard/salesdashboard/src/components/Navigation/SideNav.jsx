@@ -78,7 +78,7 @@ function SideNav() {
           <li key={item.href} className="nav-item">
             <a className="nav-link" href={item.href}>
               {item.icon}
-              <span className="ms-1 d-sm-inline d-none">{item.label}</span>
+              <span className="ms-1 d-lg-inline d-none">{item.label}</span>
             </a>
           </li>
         ))}
