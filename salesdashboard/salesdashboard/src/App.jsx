@@ -11,7 +11,7 @@ function App() {
       <div className="container-fluid m-0 wrapper">
         <Header />
         <div className="row row-offcanvas row-offcanvas-left h-100">
-          <nav className="col-lg-1 col-md-1 w-25 col-md-w-10 main-nav">
+          <nav className="col-lg-1 col-md-1 w-25 col-md-w-11 main-nav">
             <SideNav />
           </nav>
           <main className="col-lg-9 col-md-9 content-wrapper">

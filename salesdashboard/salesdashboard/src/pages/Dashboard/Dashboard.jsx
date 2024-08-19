@@ -4,6 +4,8 @@ import TotalOrders from "../../components/Cards/TotalOrders";
 import TotalProducts from "../../components/Cards/TotalProducts";
 import TotalRevenue from "../../components/Cards/TotalRevenue";
 import SPProduct from "../../components/Charts/SPProduct";
+import SalesTarget from "../../components/Charts/SalesTarget";
+import StoreSales from "../../components/Charts/StoreSales";
 
 function Dashboard() {
   return (
@@ -48,7 +50,9 @@ function Dashboard() {
           <div className="col">
             <SPProduct />
           </div>
+          <SalesTarget />
         </div>
+        <StoreSales />
       </div>
     </>
   );

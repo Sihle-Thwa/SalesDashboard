@@ -1,11 +1,20 @@
 import { BsGear, BsBell } from "react-icons/bs";
+import NotificationsModal from "../Modals/NotificationsModal";
+import { useState } from "react";
 
 function Header() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white position-sticky">
-      <a className="navbar-brand" href="/dashboard">
-        LOGO
-      </a>
       <button
         className="navbar-toggler"
         type="button"
@@ -17,13 +26,25 @@ function Header() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
         <ul className="navbar-nav">
           {navItems.map((item) => (
             <li key={item.href} className="nav-item">
-              <a className="nav-link" href={item.href}>
-                {item.icon} {item.label}
-              </a>
+              {item.icon === <BsBell /> ? (
+                <a
+                  className="nav-link"
+                  onClick={handleModalOpen}
+                >
+                  {item.icon} {item.label}
+                </a>
+              ) : (
+                <a className="nav-link" href={item.href}>
+                  {item.icon} {item.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -53,6 +74,7 @@ function Header() {
             ))}
           </ul>
         </div>
+        <NotificationsModal isOpen={showModal} onClose={handleModalClose} />
       </div>
     </nav>
   );
