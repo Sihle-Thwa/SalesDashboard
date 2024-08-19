@@ -31,8 +31,7 @@ function Dashboard() {
         </div>
       </div>
       <hr />
-
-      <div className="row p-2 m-0">
+      <div className="row ">
         <div className="col-4">
           <TotalOrders />
         </div>
@@ -43,7 +42,10 @@ function Dashboard() {
           <TotalRevenue />
         </div>
 
-        <div className="row">
+       
+        <StoreSales />
+      </div>
+      <div className="row">
           <div className="col">
             <SSales />
           </div>
@@ -52,8 +54,6 @@ function Dashboard() {
           </div>
           <SalesTarget />
         </div>
-        <StoreSales />
-      </div>
     </>
   );
 }

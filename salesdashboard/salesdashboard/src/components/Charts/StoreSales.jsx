@@ -2,6 +2,7 @@ import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 import data from '../../Data/StoreSales.json';
 function StoreSales() {
   return (
+    <>
     <BarChart
           width={600}
           height={300}
@@ -20,6 +21,8 @@ function StoreSales() {
           <Legend />
           <Bar dataKey="sales" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
         </BarChart>
+    </>
+    
   )
 }
 

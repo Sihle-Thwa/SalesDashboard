@@ -1,6 +1,7 @@
 import { BsGear, BsBell } from "react-icons/bs";
 import NotificationsModal from "../Modals/NotificationsModal";
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
