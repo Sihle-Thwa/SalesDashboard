@@ -1,0 +1,62 @@
+[
+    {
+      "month": "Jan",
+      "sales": 1200,
+      "target": 1500
+    },
+    {
+      "month": "Feb",
+      "sales": 1400,
+      "target": 1600
+    },
+    {
+      "month": "Mar",
+      "sales": 1600,
+      "target": 1800
+    },
+    {
+      "month": "Apr",
+      "sales": 1800,
+      "target": 2000
+    },
+    {
+      "month": "May",
+      "sales": 1900,
+      "target": 2200
+    },
+    {
+      "month": "Jun",
+      "sales": 2000,
+      "target": 2400
+    },
+    {
+      "month": "Jul",
+      "sales": 2100,
+      "target": 2600
+    },
+    {
+      "month": "Aug",
+      "sales": 2200,
+      "target": 2800
+    },
+    {
+      "month": "Sep",
+      "sales": 2300,
+      "target": 3000
+    },
+    {
+      "month": "Oct",
+      "sales": 2400,
+      "target": 3200
+    },
+    {
+      "month": "Nov",
+      "sales": 2500,
+      "target": 3400
+    },
+    {
+      "month": "Dec",
+      "sales": 2600,
+      "target": 3600
+    }
+  ]

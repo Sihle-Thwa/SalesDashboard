@@ -1,0 +1,122 @@
+[
+    {
+        "CustomerID": 1,
+        "Name": "John Smith",
+        "TotalSpent": 1234.56,
+        "LastPurchasedDate": "12/02/2024"
+    },
+    {
+        "CustomerID": 2,
+        "Name": "Jane Doe",
+        "TotalSpent": 567.89,
+        "LastPurchasedDate": "25/01/2024"
+    },
+    {
+        "CustomerID": 3,
+        "Name": "Bob Johnson",
+        "TotalSpent": 901.23,
+        "LastPurchasedDate": "15/03/2024"
+    },
+    {
+        "CustomerID": 4,
+        "Name": "Alice Brown",
+        "TotalSpent": 456.78,
+        "LastPurchasedDate": "28/04/2024"
+    },
+    {
+        "CustomerID": 5,
+        "Name": "Mike Davis",
+        "TotalSpent": 234.56,
+        "LastPurchasedDate": "10/05/2024"
+    },
+    {
+        "CustomerID": 6,
+        "Name": "Emily Taylor",
+        "TotalSpent": 789.01,
+        "LastPurchasedDate": "22/06/2024"
+    },
+    {
+        "CustomerID": 7,
+        "Name": "Sarah Lee",
+        "TotalSpent": 123.45,
+        "LastPurchasedDate": "05/07/2024"
+    },
+    {
+        "CustomerID": 8,
+        "Name": "David Kim",
+        "TotalSpent": 567.89,
+        "LastPurchasedDate": "18/08/2024"
+    },
+    {
+        "CustomerID": 9,
+        "Name": "Lisa Nguyen",
+        "TotalSpent": 901.23,
+        "LastPurchasedDate": "25/09/2024"
+    },
+    {
+        "CustomerID": 10,
+        "Name": "Kevin White",
+        "TotalSpent": 456.78,
+        "LastPurchasedDate": "12/10/2024"
+    },
+    {
+        "CustomerID": 11,
+        "Name": "Rachel Hall",
+        "TotalSpent": 234.56,
+        "LastPurchasedDate": "15/11/2024"
+    },
+    {
+        "CustomerID": 12,
+        "Name": "Michael Brown",
+        "TotalSpent": 789.01,
+        "LastPurchasedDate": "22/12/2024"
+    },
+    {
+        "CustomerID": 13,
+        "Name": "Jessica Martin",
+        "TotalSpent": 123.45,
+        "LastPurchasedDate": "05/02/2024"
+    },
+    {
+        "CustomerID": 14,
+        "Name": "Christopher Lee",
+        "TotalSpent": 567.89,
+        "LastPurchasedDate": "18/03/2024"
+    },
+    {
+        "CustomerID": 15,
+        "Name": "Amanda Davis",
+        "TotalSpent": 901.23,
+        "LastPurchasedDate": "25/04/2024"
+    },
+    {
+        "CustomerID": 16,
+        "Name": "Matthew Taylor",
+        "TotalSpent": 456.78,
+        "LastPurchasedDate": "12/05/2024"
+    },
+    {
+        "CustomerID": 17,
+        "Name": "Olivia Johnson",
+        "TotalSpent": 234.56,
+        "LastPurchasedDate": "15/06/2024"
+    },
+    {
+        "CustomerID": 18,
+        "Name": "Benjamin White",
+        "TotalSpent": 789.01,
+        "LastPurchasedDate": "22/07/2024"
+    },
+    {
+        "CustomerID": 19,
+        "Name": "Hannah Brown",
+        "TotalSpent": 123.45,
+        "LastPurchasedDate": "05/08/2024"
+    },
+    {
+        "CustomerID": 20,
+        "Name": "Alexander Lee",
+        "TotalSpent": 567.89,
+        "LastPurchasedDate": "18/09/2024"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+      "store": "Store A",
+      "sales": 25000
+    },
+    {
+      "store": "Store B",
+      "sales": 30000
+    },
+    {
+      "store": "Store C",
+      "sales": 22000
+    }
+  ]
