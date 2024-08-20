@@ -14,10 +14,14 @@ function App() {
           <nav className="col-lg-1 col-md-1 w-25 col-md-w-11 main-nav">
             <SideNav />
           </nav>
-          <main className="col-lg-9 col-md-9 content-wrapper">
+          <main className="col-9 content-wrapper">
             <Routes>
               {routes.map((route, index) => (
-                <Route key={index} path={route.path} element={<route.component />} />
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={<route.component />}
+                />
               ))}
             </Routes>
           </main>

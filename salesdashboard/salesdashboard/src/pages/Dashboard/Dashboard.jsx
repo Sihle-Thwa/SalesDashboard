@@ -10,24 +10,26 @@ import StoreSales from "../../components/Charts/StoreSales";
 function Dashboard() {
   return (
     <>
-      <div className="row sub-header m-0 p-1 align-items-center">
-        <h3 className="col-sm-1 col-md-8 col-lg-2 p-1">Hello Siphesihle</h3>
-        <div className="row justify-content-end">
-          <div className="col-sm-1 col-md-8 col-lg-2 ">
-            <select
-              className="form-select form-select-sm"
-              aria-label="Default select example"
-            >
-              <option value="1">Daily</option>
-              <option value="2">Weekly</option>
-              <option value="3">Monthly</option>
-            </select>
+      <div className="row sub-header mt-2 mb-1 p-1 ">
+        <div className="col">
+          <div className="page-title-heading">
+            <h3> Hello Siphesihle</h3>
           </div>
-          <div className="col-sm-1 col-md-1 col-lg-1">
-            <button className="btn btn-primary">
-              <BsDownload />
-            </button>
-          </div>
+        </div>
+        <div className="col-md-auto">
+          <select
+            className="form-select form-select-sm"
+            aria-label="Default select example"
+          >
+            <option value="1">Daily</option>
+            <option value="2">Weekly</option>
+            <option value="3">Monthly</option>
+          </select>
+        </div>
+        <div className="col col-lg-2">
+          <button className="btn btn-primary btn-sm">
+            <BsDownload />
+          </button>
         </div>
       </div>
       <hr />
