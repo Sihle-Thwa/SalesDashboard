@@ -1,11 +1,26 @@
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
-import data from '../../Data/StoreSales.json';
+import {
+  BarChart,
+  Bar,
+  Rectangle,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
+import data from "../../Data/StoreSales.json";
 function StoreSales() {
   return (
-    <>
-    <BarChart
-          width={600}
-          height={300}
+    <div className="card">
+      <div className="card-header">
+        <div className="card-title">
+          <h5>Sales Per Store</h5>
+        </div>
+      </div>
+      <div className="card-body">
+        <BarChart
+          width={500}
+          height={250}
           data={data}
           margin={{
             top: 0,
@@ -19,11 +34,15 @@ function StoreSales() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="sales" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
+          <Bar
+            dataKey="sales"
+            fill="#8884d8"
+            activeBar={<Rectangle fill="pink" stroke="blue" />}
+          />
         </BarChart>
-    </>
-    
-  )
+      </div>
+    </div>
+  );
 }
 
-export default StoreSales
+export default StoreSales;

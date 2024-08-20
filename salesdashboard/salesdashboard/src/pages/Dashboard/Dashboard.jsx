@@ -31,29 +31,32 @@ function Dashboard() {
         </div>
       </div>
       <hr />
-      <div className="row ">
-        <div className="col-4">
+      <div className="row m-0 p-1">
+        <div className="col-sm-6 col-md-4 col-lg-4 p-1">
           <TotalOrders />
         </div>
-        <div className="col-4">
+        <div className="col-sm-6 col-md-4 col-lg-4 p-1">
           <TotalProducts />
         </div>
-        <div className="col-4">
+        <div className="col-sm-6 col-md-4 col-lg-4 p-1">
           <TotalRevenue />
         </div>
-
-       
-        <StoreSales />
       </div>
-      <div className="row">
-          <div className="col">
-            <SSales />
-          </div>
-          <div className="col">
-            <SPProduct />
-          </div>
+
+      <div className="row m-0 p-1">
+        <div className="col-sm-6 col-md-4 col-lg-6 p-1">
+          <SSales />
+        </div>
+        <div className="col-sm-6 col-md-4 col-lg-6 p-1">
           <SalesTarget />
         </div>
+        <div className="col-sm-6 col-md-4 col-lg-6 p-1">
+          <SPProduct />
+        </div>
+        <div className="col-sm-6 col-md-4 col-lg-6 p-1">
+          <StoreSales />
+        </div>
+      </div>
     </>
   );
 }

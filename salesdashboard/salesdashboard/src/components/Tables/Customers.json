@@ -3,13 +3,13 @@
         "CustomerID": 1,
         "Name": "John Smith",
         "TotalSpent": 1234.56,
-        "LastPurchasedDate": "12/02/2024"
+        "LastPurchasedDate": "2024/02/12"
     },
     {
         "CustomerID": 2,
         "Name": "Jane Doe",
         "TotalSpent": 567.89,
-        "LastPurchasedDate": "25/01/2024"
+        "LastPurchasedDate": "2024/01/25"
     },
     {
         "CustomerID": 3,
