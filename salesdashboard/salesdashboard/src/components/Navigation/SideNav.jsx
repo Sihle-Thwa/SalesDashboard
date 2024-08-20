@@ -11,7 +11,6 @@ import {
 } from "react-icons/bs";
 
 function SideNav() {
-
   const navItems = [
     {
       href: "/dashboard",
@@ -59,19 +58,19 @@ function SideNav() {
       label: "Logout",
     },
   ];
-  
+
   return (
     <nav
-      className="nav d-flex flex-column flex-shrink-0 p-1 text-black bg-light w-75"
-      style={{ height: "100vh" }}
+      className="nav d-flex flex-column flex-shrink-0 p-1 text-black bg-light col-12"
+      style={{ height: "100vh", maxWidth: "100%" }}
     >
       <a
-        href="/home"
-        className="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-black text-decoration-none"
+        href="/dashboard"
+        className="d-flex align-items-center mb-2  me-md-auto text-black text-decoration-none"
       >
         <h1 className="d-none d-lg-block">Sales4U</h1>
       </a>
-      <hr className="d-none d-lg-block" />
+      <hr className=" d-lg-block" />
 
       <ul className="nav nav-pills flex-column mb-1">
         {navItems.map((item) => (
@@ -86,6 +85,5 @@ function SideNav() {
     </nav>
   );
 }
-
 
 export default SideNav;

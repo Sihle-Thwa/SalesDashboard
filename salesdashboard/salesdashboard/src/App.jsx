@@ -8,13 +8,13 @@ import { routes } from "./routes";
 function App() {
   return (
     <BrowserRouter>
-      <div className="container-fluid m-0 wrapper">
+      <div className="app w-100">
         <Header />
-        <div className="row row-offcanvas row-offcanvas-left h-100">
-          <nav className="col-lg-1 col-md-1 w-25 col-md-w-11 main-nav">
+        <div className="row h-100">
+          <nav className="col-1 p-0 main-nav">
             <SideNav />
           </nav>
-          <main className="col-9 content-wrapper">
+          <main className="col-11">
             <Routes>
               {routes.map((route, index) => (
                 <Route

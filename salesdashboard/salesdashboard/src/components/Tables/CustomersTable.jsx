@@ -1,34 +1,4 @@
 import { useState, useEffect } from "react";
-import jsonSchema from "jsonschema";
-
-const customerSchema = {
-  type: "array",
-  items: {
-    type: "object",
-    properties: {
-      CustomerID: { type: "integer" },
-      Name: { type: "string" },
-      TotalSpent: { type: "number" },
-      LastPurchasedDate: { type: "string", format: "date" },
-    },
-    required: ["CustomerID", "Name", "TotalSpent", "LastPurchasedDate"],
-  },
-};
-
-function validateCustomers(data) {
-  try {
-    const result = jsonSchema.validate(data, customerSchema);
-    if (result.valid) {
-      return data;
-    } else {
-      console.error("Invalid customer data:", result.errors);
-      return [];
-    }
-  } catch (error) {
-    console.error("Error validating customer data:", error);
-    return [];
-  }
-}
 
 function CustomersTable() {
   const [customers, setCustomers] = useState([]);
@@ -39,8 +9,7 @@ function CustomersTable() {
         return response.json();
       })
       .then(function (data) {
-        const validCustomers = validateCustomers(data);
-        setCustomers(validCustomers);
+        setCustomers(data);
       });
   }, []);
 
