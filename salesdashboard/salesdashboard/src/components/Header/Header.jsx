@@ -1,12 +1,21 @@
-import { BsGear } from "react-icons/bs";
-import { BsBell } from "react-icons/bs";
+import { BsGear, BsBell } from "react-icons/bs";
+import NotificationsModal from "../Modals/NotificationsModal";
+import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white position-sticky">
-      <a className="navbar-brand" href="/dashboard">
-        LOGO
-      </a>
       <button
         className="navbar-toggler"
         type="button"
@@ -18,23 +27,27 @@ function Header() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
         <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Search <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <BsBell />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              <BsGear />
-            </a>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.href} className="nav-item">
+              {item.icon === <BsBell /> ? (
+                <a
+                  className="nav-link"
+                  onClick={handleModalOpen}
+                >
+                  {item.icon} {item.label}
+                </a>
+              ) : (
+                <a className="nav-link" href={item.href}>
+                  {item.icon} {item.label}
+                </a>
+              )}
+            </li>
+          ))}
         </ul>
         <div className="btn-group justify-content-end">
           <button
@@ -44,42 +57,60 @@ function Header() {
             aria-expanded="false"
           >
             <img
-              src=""
+              src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
               alt=""
-              width="32"
-              height="32"
+              width="24"
+              height="24"
               className="rounded-circle me-2"
             />
             <strong>S.Mthethwa</strong>
           </button>
-          <ul
-            className="dropdown-menu dropdown-menu-end"
-          >
-            <li>
-              <a className="dropdown-item" href="#">
-                New Customer
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                New Product
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Generate Invoice
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Log out
-              </a>
-            </li>
+          <ul className="dropdown-menu dropdown-menu-end">
+            {dropdownItems.map((item) => (
+              <li key={item.href}>
+                <a className="dropdown-item" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
+        <NotificationsModal isOpen={showModal} onClose={handleModalClose} />
       </div>
     </nav>
   );
 }
+
+const navItems = [
+  {
+    href: "#",
+    icon: <BsBell />,
+    label: "Notifications",
+  },
+  {
+    href: "#",
+    icon: <BsGear />,
+    label: "Settings",
+  },
+];
+
+const dropdownItems = [
+  {
+    href: "#",
+    label: "New Customer",
+  },
+  {
+    href: "#",
+    label: "New Product",
+  },
+  {
+    href: "#",
+    label: "Generate Invoice",
+  },
+  {
+    href: "#",
+    label: "Log out",
+  },
+];
 
 export default Header;

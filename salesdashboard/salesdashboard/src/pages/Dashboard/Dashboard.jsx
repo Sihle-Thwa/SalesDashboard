@@ -4,6 +4,8 @@ import TotalOrders from "../../components/Cards/TotalOrders";
 import TotalProducts from "../../components/Cards/TotalProducts";
 import TotalRevenue from "../../components/Cards/TotalRevenue";
 import SPProduct from "../../components/Charts/SPProduct";
+import SalesTarget from "../../components/Charts/SalesTarget";
+import StoreSales from "../../components/Charts/StoreSales";
 
 function Dashboard() {
   return (
@@ -29,8 +31,7 @@ function Dashboard() {
         </div>
       </div>
       <hr />
-
-      <div className="row p-2 m-0">
+      <div className="row ">
         <div className="col-4">
           <TotalOrders />
         </div>
@@ -41,15 +42,18 @@ function Dashboard() {
           <TotalRevenue />
         </div>
 
-        <div className="row">
+       
+        <StoreSales />
+      </div>
+      <div className="row">
           <div className="col">
             <SSales />
           </div>
           <div className="col">
             <SPProduct />
           </div>
+          <SalesTarget />
         </div>
-      </div>
     </>
   );
 }
