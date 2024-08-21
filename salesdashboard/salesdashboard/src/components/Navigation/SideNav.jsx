@@ -11,50 +11,53 @@ import {
 } from "react-icons/bs";
 
 function SideNav() {
-  const navItems = [
+  const mainNavItems = [
     {
       href: "/dashboard",
-      icon: <BsColumns />,
+      icon: <BsColumns size={20} />,
       label: "Dashboard",
     },
     {
       href: "/report",
-      icon: <BsFileEarmarkText />,
+      icon: <BsFileEarmarkText size={20} />,
       label: "Report",
     },
     {
       href: "/product",
-      icon: <BsTicket />,
+      icon: <BsTicket size={20} />,
       label: "Product",
     },
     {
-      href: "#",
-      icon: <BsGraphUp />,
+      href: "#/analytics",
+      icon: <BsGraphUp size={20} />,
       label: "Analytics",
     },
     {
-      href: "#",
-      icon: <BsSpeedometer />,
+      href: "#/performance",
+      icon: <BsSpeedometer size={20} />,
       label: "Performance",
     },
     {
       href: "/customers",
-      icon: <BsPeople />,
+      icon: <BsPeople size={20} />,
       label: "Customers",
     },
+  ];
+
+  const footerNavItems = [
     {
-      href: "#",
-      icon: <BsQuestion />,
-      label: "Help center",
+      href: "#/help",
+      icon: <BsQuestion size={20} />,
+      label: "Help",
     },
     {
-      href: "#",
-      icon: <BsGear />,
+      href: "#/settings",
+      icon: <BsGear size={20} />,
       label: "Settings",
     },
     {
-      href: "#",
-      icon: <BsPc />,
+      href: "#/logout",
+      icon: <BsPc size={20} />,
       label: "Logout",
     },
   ];
@@ -62,22 +65,37 @@ function SideNav() {
   return (
     <nav
       className="nav d-flex flex-column flex-shrink-0 p-1 text-black bg-light col-12"
-      style={{ height: "100vh", maxWidth: "100%" }}
+      style={{ height: "100vh", maxWidth: "300px", boxShadow: "5px 0 10px rgba(0, 0, 0, 0.1)" }}
     >
       <a
         href="/dashboard"
         className="d-flex align-items-center mb-2  me-md-auto text-black text-decoration-none"
       >
-        <h1 className="d-none d-lg-block">Sales4U</h1>
+        <h2 className="d-none d-lg-block lh-3 ">Sales4U</h2>
       </a>
-      <hr className=" d-lg-block" />
+      <hr className=" d-none d-lg-block" />
 
-      <ul className="nav nav-pills flex-column mb-1">
-        {navItems.map((item) => (
-          <li key={item.href} className="nav-item">
-            <a className="nav-link" href={item.href}>
+      <ul className="nav nav-pills flex-column mb-auto ml-1 mt-1 pb-1 pt-1 lh-3">
+        {mainNavItems.map((item) => (
+          <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3">
+            <a className="nav-link p-3" href={item.href}>
               {item.icon}
-              <span className="ms-1 d-lg-inline d-none">{item.label}</span>
+              <span className="ms-1 d-lg-inline d-none  " style={{ fontSize: "16px" }}>
+                {item.label}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <ul className="nav nav-pills flex-column mb-0 ml-1 pb-1 pt-1 link-offset-1-hover ">
+        {footerNavItems.map((item) => (
+          <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3 ">
+            <a className="nav-link p-3" href={item.href}>
+              {item.icon}
+              <span className="ms-1 d-lg-inline d-none" style={{ fontSize: "16px" }}>
+                {item.label}
+              </span>
             </a>
           </li>
         ))}
