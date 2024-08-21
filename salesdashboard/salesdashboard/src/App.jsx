@@ -11,7 +11,7 @@ function App() {
       <div className="app ">
         <Header />
         <div className="row h-100">
-          <nav className="col-2 p-1 main-nav" style={{ maxWidth: "250px", height: "100vh" }}>
+          <nav className="col-2 main-nav" style={{ maxWidth: "250px", height: "100vh" }}>
             <SideNav />
           </nav>
           <main className="col-10">

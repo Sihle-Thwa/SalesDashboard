@@ -9,6 +9,7 @@ import {
   BsSpeedometer,
   BsTicket,
 } from "react-icons/bs";
+import './SidaNav.css'
 
 function SideNav() {
   const mainNavItems = [
@@ -64,8 +65,8 @@ function SideNav() {
 
   return (
     <nav
-      className="nav d-flex flex-column flex-shrink-0 p-1 text-black bg-light col-12"
-      style={{ height: "100vh", maxWidth: "300px", boxShadow: "5px 0 10px rgba(0, 0, 0, 0.1)" }}
+      className="nav d-flex flex-column flex-shrink-0 text-dark bg-light col-12 border-end text-decoration-none"
+      style={{ height: "100vh", maxWidth: "300px" }}
     >
       <a
         href="/dashboard"
@@ -73,29 +74,24 @@ function SideNav() {
       >
         <h2 className="d-none d-lg-block lh-3 ">Sales4U</h2>
       </a>
-      <hr className=" d-none d-lg-block" />
 
       <ul className="nav nav-pills flex-column mb-auto ml-1 mt-1 pb-1 pt-1 lh-3">
         {mainNavItems.map((item) => (
           <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3">
             <a className="nav-link p-3" href={item.href}>
-              {item.icon}
-              <span className="ms-1 d-lg-inline d-none  " style={{ fontSize: "16px" }}>
-                {item.label}
-              </span>
+              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">{item.label}</span>
             </a>
           </li>
         ))}
       </ul>
 
-      <ul className="nav nav-pills flex-column mb-0 ml-1 pb-1 pt-1 link-offset-1-hover ">
+      <ul className="nav nav-pills flex-column mb-0 ml-1 pb-1 pt-1 link-offset-1-hover">
         {footerNavItems.map((item) => (
-          <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3 ">
+          <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3">
             <a className="nav-link p-3" href={item.href}>
-              {item.icon}
-              <span className="ms-1 d-lg-inline d-none" style={{ fontSize: "16px" }}>
-                {item.label}
-              </span>
+              <span className="nav-icon">{item.icon}</span>
+              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">{item.label}</span>
             </a>
           </li>
         ))}

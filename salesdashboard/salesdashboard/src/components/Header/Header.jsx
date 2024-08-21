@@ -1,7 +1,6 @@
 import { BsGear, BsBell } from "react-icons/bs";
 import NotificationsModal from "../Modals/NotificationsModal";
 import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +14,10 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-white position-sticky">
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-white text-dark border-bottom"
+      
+    >
       <button
         className="navbar-toggler"
         type="button"
@@ -83,12 +85,12 @@ function Header() {
 
 const navItems = [
   {
-    href: "#",
+    href: "#NotificationModal",
     icon: <BsBell />,
     label: "Notifications",
   },
   {
-    href: "#",
+    href: "#/settings",
     icon: <BsGear />,
     label: "Settings",
   },
@@ -96,19 +98,19 @@ const navItems = [
 
 const dropdownItems = [
   {
-    href: "#",
+    href: "/new-customer",
     label: "New Customer",
   },
   {
-    href: "#",
+    href: "#/new-product",
     label: "New Product",
   },
   {
-    href: "#",
+    href: "#/generate-invoice",
     label: "Generate Invoice",
   },
   {
-    href: "#",
+    href: "#/logout",
     label: "Log out",
   },
 ];
