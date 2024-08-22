@@ -31,8 +31,8 @@ function SalesTarget() {
             <Tooltip />
             <Legend />
 
-            <Line type="monotone" dataKey="sales" stroke="#750505" />
-            <Line type="monotone" dataKey="target" stroke="#750505" />
+            <Line type="monotone" dataKey="sales" stroke="#06c" />
+            <Line type="monotone" dataKey="target" stroke="#4cb140" />
           </LineChart>
         </ResponsiveContainer>
       </div>

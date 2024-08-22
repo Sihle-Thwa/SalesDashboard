@@ -1,3 +1,4 @@
+import { FcDatabase } from "react-icons/fc";
 import data from "../../Data/TotalProducts.json";
 import SummaryCard from "./SummaryCard";
 
@@ -9,6 +10,7 @@ function TotalProducts() {
       value={totalProduct}
       percentage={percentage}
       className="total-products-card"
+      icon={<FcDatabase size={50} />}
     />
   );
 }

@@ -1,3 +1,4 @@
+import { FcSalesPerformance } from "react-icons/fc";
 import data from "../../Data/TotalRevenue.json";
 import SummaryCard from "./SummaryCard";
 
@@ -10,6 +11,7 @@ function TotalRevenue() {
       value={totalRevenue}
       percentage={percentage}
       className="total-revenue-card"
+      icon={<FcSalesPerformance size={50} />}
     />
   );
 }

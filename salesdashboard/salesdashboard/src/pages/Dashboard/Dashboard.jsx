@@ -29,7 +29,7 @@ function Dashboard() {
         <div className="col col-lg-2">
           <button className="btn btn-primary btn-sm">
             <BsDownload />
-            <small>Export</small>
+            <small> Export</small>
           </button>
         </div>
       </div>

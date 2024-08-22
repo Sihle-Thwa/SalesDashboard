@@ -1,6 +1,8 @@
 import data from "../../Data/TotalOrders.json";
 import SummaryCard from "./SummaryCard";
-import "./charts.css";
+
+import { FcBarChart } from "react-icons/fc";
+
 function TotalOrders() {
   const { totalOrder, percentage } = data;
 
@@ -10,6 +12,7 @@ function TotalOrders() {
       value={totalOrder}
       percentage={percentage}
       className="total-orders-card"
+      icon={<FcBarChart size={50} />}
     />
   );
 }

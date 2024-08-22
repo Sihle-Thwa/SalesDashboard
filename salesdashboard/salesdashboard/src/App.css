@@ -3,8 +3,8 @@
 
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: antiquewhite;
+  font-family: "Inter", sans-serif !important;
+  background-color: #Caced8 !important;
   
 }
 
