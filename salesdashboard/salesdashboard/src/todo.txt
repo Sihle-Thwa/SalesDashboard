@@ -1,53 +1,25 @@
-import React, { useState, useEffect } from 'react';
-
-function CustomerTable() {
-  const [customers, setCustomers] = useState([]);
-
-  useEffect(() => {
-    fetch('customers.json')
-      .then(response => response.json())
-      .then(data => setCustomers(data));
-  }, []);
-
-  return (
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title">Customer List</h5>
-      </div>
-      <div class="card-body">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Customer Name</th>
-              <th>Total Spent</th>
-              <th>Last Purchase Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {customers.map(customer => (
-              <tr key={customer.id}>
-                <td>{customer.name}</td>
-                <td>${customer.totalSpent}.00</td>
-                <td>{customer.lastPurchaseDate}</td>
-                <td>
-                  <button class="btn btn-sm btn-primary" title="Edit">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="btn btn-sm btn-warning" title="View">
-                    <i class="fas fa-eye"></i>
-                  </button>
-                  <button class="btn btn-sm btn-danger" title="Delete">
-                    <i class="fas fa-trash-alt"></i>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
-export default CustomerTable;
+<button
+            className="btn btn-secondary btn-sm dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropDownMenuProfile"
+          >
+            <img
+              src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
+              alt=""
+              width="24"
+              height="24"
+              className="rounded-circle me-2"
+            />
+            <strong>S.Mthethwa</strong>
+            <ul className="dropdown-menu" aria-labelledby="dropDownMenuProfile">
+              {dropdownItems.map((item) => (
+                <li key={item.href}>
+                  <a className="dropdown-item" href={item.href}>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </button>

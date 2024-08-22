@@ -9,7 +9,7 @@ import {
   BsSpeedometer,
   BsTicket,
 } from "react-icons/bs";
-import './SidaNav.css'
+import "./SidaNav.css";
 
 function SideNav() {
   const mainNavItems = [
@@ -72,7 +72,7 @@ function SideNav() {
         href="/dashboard"
         className="d-flex align-items-center mb-2  me-md-auto text-black text-decoration-none"
       >
-        <h2 className="d-none d-lg-block lh-3 ">Sales4U</h2>
+        <h2 className="d-none d-lg-block lh-3 lh-2 align-self-center">SBM</h2>
       </a>
 
       <ul className="nav nav-pills flex-column mb-auto ml-1 mt-1 pb-1 pt-1 lh-3">
@@ -80,7 +80,9 @@ function SideNav() {
           <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3">
             <a className="nav-link p-3" href={item.href}>
               <span className="nav-icon">{item.icon}</span>
-              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">{item.label}</span>
+              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">
+                {item.label}
+              </span>
             </a>
           </li>
         ))}
@@ -91,7 +93,9 @@ function SideNav() {
           <li key={item.href} className="nav-item ml-1 mt-1 pb-1 pt-1 lh-3">
             <a className="nav-link p-3" href={item.href}>
               <span className="nav-icon">{item.icon}</span>
-              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">{item.label}</span>
+              <span className="nav-label ms-1 d-lg-inline p-lg-2 d-none">
+                {item.label}
+              </span>
             </a>
           </li>
         ))}

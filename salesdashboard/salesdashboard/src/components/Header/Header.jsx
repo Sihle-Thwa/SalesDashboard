@@ -14,10 +14,7 @@ function Header() {
   };
 
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-light bg-white text-dark border-bottom"
-      
-    >
+    <nav className="navbar navbar-expand-lg navbar-light bg-white text-dark border-bottom">
       <button
         className="navbar-toggler"
         type="button"
@@ -37,10 +34,7 @@ function Header() {
           {navItems.map((item) => (
             <li key={item.href} className="nav-item">
               {item.icon === <BsBell /> ? (
-                <a
-                  className="nav-link"
-                  onClick={handleModalOpen}
-                >
+                <a className="nav-link" onClick={handleModalOpen}>
                   {item.icon} {item.label}
                 </a>
               ) : (
@@ -51,12 +45,13 @@ function Header() {
             </li>
           ))}
         </ul>
-        <div className="btn-group justify-content-end">
+        <div className="dropdown justify-content-end">
           <button
-            className="btn btn-secondary btn-sm dropdown-toggle"
+            className="btn btn-secondary btn-sm dropdown-toggle bg-white text-dark"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            id="dropDownMenuProfile"
           >
             <img
               src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
@@ -65,9 +60,9 @@ function Header() {
               height="24"
               className="rounded-circle me-2"
             />
-            <strong>S.Mthethwa</strong>
+            <strong>Siphesihle</strong>
           </button>
-          <ul className="dropdown-menu dropdown-menu-end">
+          <ul className="dropdown-menu" aria-labelledby="dropDownMenuProfile">
             {dropdownItems.map((item) => (
               <li key={item.href}>
                 <a className="dropdown-item" href={item.href}>

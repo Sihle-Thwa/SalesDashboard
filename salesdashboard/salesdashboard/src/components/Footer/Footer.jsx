@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <div className="row app-footer position-sticky">
+      <div className="row footer position-sticky b-0 zindex-sticky">
         <div className="app-footer_inner">
           <div className=" col app-footer-left">
             <ul className="nav">

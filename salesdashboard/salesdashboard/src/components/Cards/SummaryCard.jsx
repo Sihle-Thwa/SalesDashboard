@@ -24,8 +24,7 @@ const SummaryCard = ({ title, value, percentage, className, icon }) => {
           <div className="row ms-auto">
             <li className="list-group-item">
               <span className="badge badge-pill badge-success">
-                <BsArrowUpRight />
-                {percentage}%
+                <BsArrowUpRight /> {percentage}%
               </span>
               <small className="text-muted">
                 {" "}
