@@ -1,10 +1,9 @@
-
 function Footer() {
   return (
     <>
-      <div className="app-footer position-sticky">
-        <div className="app-footer__inner">
-          <div className="app-footer-left">
+      <div className="row app-footer position-sticky">
+        <div className="app-footer_inner">
+          <div className=" col app-footer-left">
             <ul className="nav">
               <li className="nav-item">
                 <a href="#" className="nav-link">
@@ -18,7 +17,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="app-footer-right">
+          <div className="col app-footer-right">
             <ul className="nav">
               <li className="nav-item">
                 <a href="#" className="nav-link">
@@ -38,7 +37,7 @@ function Footer() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

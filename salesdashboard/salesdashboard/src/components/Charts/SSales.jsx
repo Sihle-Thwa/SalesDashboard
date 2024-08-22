@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 import data from "../../Data/Sales.json";
 
@@ -18,20 +19,20 @@ function SSales() {
         </div>
       </div>
       <div className="card-body">
-        <LineChart
-          width={500}
-          height={250}
-          data={data} // access the array of objects within the data object
-          margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
-          <YAxis dataKey="TotalSales" />
-          <Tooltip />
-          <Legend />
+        <ResponsiveContainer width="100%" height={250}>
+          <LineChart
+            data={data} // access the array of objects within the data object
+            margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="day" />
+            <YAxis dataKey="TotalSales" />
+            <Tooltip />
+            <Legend />
 
-          <Line type="monotone" dataKey="TotalSales" stroke="#06c" />
-        </LineChart>
+            <Line type="monotone" dataKey="TotalSales" stroke="#06c" />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );
