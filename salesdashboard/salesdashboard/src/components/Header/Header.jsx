@@ -1,20 +1,20 @@
-import { BsGear, BsBell } from "react-icons/bs";
-import NotificationsModal from "../Modals/NotificationsModal";
 import { useState } from "react";
+import { BsGear, BsBell } from "react-icons/bs";
+import NotificationsModal from "../../components/Modals/NotificationsModal";
 
 function Header() {
-  const [showModal, setShowModal] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
 
-  const handleModalOpen = () => {
-    setShowModal(true);
+  const handleNotificationsOpen = () => {
+    setShowNotifications(true);
   };
 
-  const handleModalClose = () => {
-    setShowModal(false);
+  const handleNotificationsClose = () => {
+    setShowNotifications(false);
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white text-dark border-bottom">
+    <nav className="navbar navbar-expand-lg bg-white text-dark border-bottom">
       <button
         className="navbar-toggler"
         type="button"
@@ -31,20 +31,32 @@ function Header() {
         id="navbarSupportedContent"
       >
         <ul className="navbar-nav">
-          {navItems.map((item) => (
-            <li key={item.href} className="nav-item">
-              {item.icon === <BsBell /> ? (
-                <a className="nav-link" onClick={handleModalOpen}>
-                  {item.icon} {item.label}
-                </a>
-              ) : (
-                <a className="nav-link" href={item.href}>
-                  {item.icon} {item.label}
-                </a>
-              )}
-            </li>
-          ))}
+          <li className="nav-item">
+            <a className="nav-link" onClick={handleNotificationsOpen}>
+              <BsBell />
+              Notifications
+            </a>
+          </li>
+          {showNotifications && (
+            <div
+              className="position-absolute notification-modal"
+              style={{
+                top: "50px",
+                right: "20x",
+                zIndex: 1000,
+              }}
+            >
+              <NotificationsModal onClose={handleNotificationsClose} />
+            </div>
+          )}
+          <li className="nav-item">
+            <a className="nav-link">
+              <BsGear />
+              Settings
+            </a>
+          </li>
         </ul>
+
         <div className="dropdown justify-content-end">
           <button
             className="btn btn-secondary btn-sm dropdown-toggle bg-white text-dark"
@@ -72,24 +84,10 @@ function Header() {
             ))}
           </ul>
         </div>
-        <NotificationsModal isOpen={showModal} onClose={handleModalClose} />
       </div>
     </nav>
   );
 }
-
-const navItems = [
-  {
-    href: "#NotificationModal",
-    icon: <BsBell />,
-    label: "Notifications",
-  },
-  {
-    href: "#/settings",
-    icon: <BsGear />,
-    label: "Settings",
-  },
-];
 
 const dropdownItems = [
   {

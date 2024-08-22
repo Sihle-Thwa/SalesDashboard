@@ -65,7 +65,7 @@ function SideNav() {
 
   return (
     <nav
-      className="nav d-flex flex-column flex-shrink-0 text-dark bg-light col-12 border-end text-decoration-none"
+      className="nav d-flex flex-column flex-shrink-0 text-dark bg-white col-12 border-end text-decoration-none"
       style={{ height: "100vh", maxWidth: "300px" }}
     >
       <a

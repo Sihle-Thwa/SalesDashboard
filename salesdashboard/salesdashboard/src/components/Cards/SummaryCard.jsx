@@ -8,7 +8,7 @@ const SummaryCard = ({ title, value, percentage, className, icon }) => {
       <div className="card-header">
         <div className="card-title d-flex">
           <h4>{title}</h4>
-          <button className="btn ms-auto p-2 justify-content-end decoration-none ">
+          <button className="btn ms-auto p-2 justify-content-end  ">
             <BsThreeDots />
           </button>
         </div>
