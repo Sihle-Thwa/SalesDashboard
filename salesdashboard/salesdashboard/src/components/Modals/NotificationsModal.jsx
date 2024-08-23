@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function NotificationsModal(props) {
   return (
     <div className="card">
@@ -19,5 +21,9 @@ function NotificationsModal(props) {
     </div>
   );
 }
+
+NotificationsModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default NotificationsModal;

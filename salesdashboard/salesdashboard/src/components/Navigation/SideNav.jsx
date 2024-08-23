@@ -52,7 +52,7 @@ function SideNav() {
       label: "Help",
     },
     {
-      href: "#/settings",
+      href: "/settings",
       icon: <BsGear size={20} />,
       label: "Settings",
     },

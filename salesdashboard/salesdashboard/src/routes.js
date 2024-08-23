@@ -2,6 +2,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Product from "./pages/Product/Product";
 import ReportPage from "./pages/ReportPage/ReportPage";
 import Customers from "./pages/Customers/Customers";
+import Settings from "./pages/Settings/Settings";
 
 export const routes = [
   {
@@ -19,5 +20,9 @@ export const routes = [
   {
     path: "/customers",
     component: Customers,
+  },
+  {
+    path: "/settings",
+    component: Settings,
   },
 ];
