@@ -50,7 +50,7 @@ function Header() {
             </div>
           )}
           <li className="nav-item">
-            <a className="nav-link">
+            <a className="nav-link" href="/settings">
               <BsGear />
               Settings
             </a>

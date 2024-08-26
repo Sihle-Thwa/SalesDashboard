@@ -5,43 +5,51 @@ import NotificationsSettings from "../../components/Features/Settings/Components
 import AccountSettings from "../../components/Features/Settings/Components/AccountSettings";
 import UserSettings from "../../components/Features/Settings/Components/UserSettings";
 import BillingsSettings from "../../components/Features/Settings/Components/BillingSettings";
+import {
+  BsBell,
+  BsCashStack,
+  BsGear,
+  BsPeople,
+  BsUniversalAccess,
+  BsWindowDesktop,
+} from "react-icons/bs";
 
 function Settings() {
   const [activeComponent, setActiveComponent] = useState(null);
   const settingsNavItems = [
     {
       href: "/ssettings-general",
-      icon: "",
+      icon: <BsPeople />,
       label: "General",
       component: <GeneralSettings />,
     },
     {
       href: "/ssettings-preference",
-      icon: "",
+      icon: <BsWindowDesktop />,
       label: "Preference",
       component: <PreferenceSettings />,
     },
     {
       href: "/ssettings-Notifications",
-      icon: "",
+      icon: <BsBell />,
       label: "Notifications",
       component: <NotificationsSettings />,
     },
     {
       href: "/ssettings-Account",
-      icon: "",
+      icon: <BsGear />,
       label: "Account",
       component: <AccountSettings />,
     },
     {
       href: "/ssettings-User",
-      icon: "",
-      label: "User Permissions",
+      icon: <BsUniversalAccess />,
+      label: "Permissions",
       component: <UserSettings />,
     },
     {
       href: "/ssettings-Billings",
-      icon: "",
+      icon: <BsCashStack />,
       label: "Billings",
       component: <BillingsSettings />,
     },
@@ -61,7 +69,7 @@ function Settings() {
           </div>
         </div>
         <div className="col col-lg-1 ">
-          <button className="btn btn-light w-100 md-w-75 ">
+          <button className="btn btn-light w-100  ">
             <small> Cancel</small>
           </button>
         </div>
@@ -75,7 +83,7 @@ function Settings() {
 
       {/* Settings Navigation */}
 
-      <div className="row bg-white">
+      <div className="row bg-white border-1">
         <div className="col-2">
           <ul className="nav nav-pills flex-column mb-auto ml-1 mt-1 pb-1 pt-1">
             {settingsNavItems.map((item, index) => (
@@ -85,7 +93,7 @@ function Settings() {
                   onClick={() => handleNavItemClick(item.component)}
                 >
                   <span className="nav-icon"> {item.icon}</span>
-                  <span className="nav-label ms-1 d-lg-inline p-lg-2 ">
+                  <span className="nav-label d-none ms-1 d-lg-inline p-lg-2 ">
                     {item.label}
                   </span>
                 </a>

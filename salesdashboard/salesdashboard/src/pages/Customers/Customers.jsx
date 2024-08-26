@@ -5,22 +5,21 @@ import DateRangeComponent from "../../components/DateRangeComponent";
 function Customers() {
   return (
     <>
-      <div className="row row  mt-2 mb-1 p-1 ">
-        <div className="col">
+      <div className="row row mt-2 mb-1 p-1  ">
+        <div className="col-md-6">
           <div className="input-group">
             <input
               type="search"
               className="form-control"
-              placeholder="Search"
+              placeholder="Search for customer"
               aria-label="Search.."
             />
-            <i className="bi bi-search"></i>
           </div>
         </div>
-        <div className="col">
+        <div className="col-md-6">
           <DateRangeComponent />
         </div>
-        <div className="col">
+        <div className="col-md-6">
           <button
             type="button"
             className="btn btn-primary btn-sm"

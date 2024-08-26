@@ -4,8 +4,8 @@
   }
   
   .nav-link:hover {
-    background-color: #f7f7f7 !important;
-    color: #337ab7 !important;
+    background-color: #06c !important;
+    color: #fff !important;
   }
 .nav-link.active:hover {
     background-color: #337ab7 !important;
@@ -32,16 +32,14 @@
 
 .nav-link.active .nav-icon,
 .nav-link.active .nav-label {
-  text-decoration: underline !important;
-  text-underline-offset: 5px !important;
+ 
   text-decoration-color: #337ab7 !important;
   transform: translateX(10px) !important;
 }
 
 .nav-link:hover .nav-icon,
 .nav-link:hover .nav-label {
-  text-decoration: underline !important;
-  text-underline-offset: 5px !important;
+ 
   text-decoration-color: #337ab7 !important;
   
 }

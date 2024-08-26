@@ -72,7 +72,12 @@ function SideNav() {
         href="/dashboard"
         className="d-flex align-items-center mb-2  me-md-auto text-black text-decoration-none"
       >
-        <h2 className="d-none d-lg-block lh-3 lh-2 align-self-center">SBM</h2>
+        <h2
+          className="d-none d-lg-block lh-3 lh-2 align-self-center"
+          style={{ color: "#06c" }}
+        >
+          SBM
+        </h2>
       </a>
 
       <ul className="nav nav-pills flex-column mb-auto ml-1 mt-1 pb-1 pt-1 lh-3">
