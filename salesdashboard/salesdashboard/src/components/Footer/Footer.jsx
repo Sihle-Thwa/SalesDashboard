@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className="row footer position-sticky b-0 bg-white z-sticky">
-      <div className="col-2">
+    <div className="navbar navbar-expand-lg position-sticky bg-white ">
+      <div className="col">
         <p className="text-muted"> Dashboard by Siphesihle B Mthethwa</p>
       </div>
     </div>

@@ -1,0 +1,10 @@
+
+.dropdown-menu {
+    position:fixed !important;
+    z-index: 1000;
+    left: 10% !important;
+    top: 5% !important;
+    width: 250px !important;
+    min-width: 10px !important;
+    
+}

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { BsGear, BsBell } from "react-icons/bs";
 import NotificationsModal from "../../components/Modals/NotificationsModal";
+import ProfileModal from "../Modals/ProfileModal";
+import './header.css'
 
 function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   const handleNotificationsOpen = () => {
     setShowNotifications(true);
@@ -12,6 +15,15 @@ function Header() {
   const handleNotificationsClose = () => {
     setShowNotifications(false);
   };
+
+  const handleProfileMenuOpen = () => {
+    setShowProfileMenu(true);
+  };
+
+  const handleProfileMenuClose = () => {
+    setShowProfileMenu(false);
+  }
+
 
   return (
     <nav className="navbar navbar-expand-lg bg-white text-dark border-bottom">
@@ -32,7 +44,8 @@ function Header() {
       >
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" onClick={handleNotificationsOpen}>
+            <a className="nav-link" onClick={handleNotificationsOpen}
+            >
               <BsBell />
               Notifications
             </a>
@@ -42,7 +55,7 @@ function Header() {
               className="position-absolute notification-modal"
               style={{
                 top: "50px",
-                right: "20x",
+                right: "20px",
                 zIndex: 1000,
               }}
             >
@@ -64,7 +77,8 @@ function Header() {
             role="button"
             data-toggle="dropdown"
             aria-expanded="false"
-            id="dropDownMenuProfile"
+            
+            onClick={handleProfileMenuOpen}
 
           >
             <img
@@ -76,38 +90,26 @@ function Header() {
             />
             <strong>Siphesihle</strong>
           </button>
-          <ul className="dropdown-menu position-absolute" aria-labelledby="dropDownMenuProfile">
-            {dropdownItems.map((item) => (
-              <li key={item.href}>
-                <a className="dropdown-item" href={item.href}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {showProfileMenu && (
+            <div
+              className="position-absolute notification-modal"
+              style={{
+                top: "50px",
+                right: "20px",
+                zIndex: 1000,
+              }}
+            >
+              <ProfileModal onClose={handleProfileMenuClose} />
+            </div>
+          )}
+          
+          
         </div>
       </div>
     </nav>
   );
 }
 
-const dropdownItems = [
-  {
-    href: "/new-customer",
-    label: "New Customer",
-  },
-  {
-    href: "#/new-product",
-    label: "New Product",
-  },
-  {
-    href: "#/generate-invoice",
-    label: "Generate Invoice",
-  },
-  {
-    href: "#/logout",
-    label: "Log out",
-  },
-];
+
 
 export default Header;
