@@ -7,20 +7,7 @@ function Customers() {
     <>
       <div className="row row mt-2 mb-1 p-1  ">
         <div className="col-md-6">
-          <div className="input-group">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Search for customer"
-              aria-label="Search.."
-            />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <DateRangeComponent />
-        </div>
-        <div className="col-md-6">
-          <button
+        <button
             type="button"
             className="btn btn-primary btn-sm"
             data-bs-toggle="modal"
@@ -29,6 +16,13 @@ function Customers() {
             Add New Customer
           </button>
           <NewCustomer />
+          
+        </div>
+        <div className="col-md-6">
+          <DateRangeComponent />
+        </div>
+        <div className="col-md-6">
+          
         </div>
       </div>
 

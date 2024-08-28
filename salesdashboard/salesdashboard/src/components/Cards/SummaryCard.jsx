@@ -5,19 +5,17 @@ import "./card.css";
 const SummaryCard = ({ title, value, percentage, className, icon }) => {
   return (
     <div className={`card ${className} w-100`}>
-      <div className="card-header bg-white">
-        <div className="card-title d-flex">
+      <div className="card-body">
+      <div className="card-title d-flex">
           <h4>{title}</h4>
           <button className="btn ms-auto p-2">
             <BsThreeDots />
           </button>
         </div>
-      </div>
-      <div className="card-body">
         <div className="row">
           <div className="col">
             <li className="list-group-item">
-              <h1 className="lh-1">{value}</h1>
+              <h1 className="col">{value}</h1>
             </li>
           </div>
           <div className="col">{icon}</div>

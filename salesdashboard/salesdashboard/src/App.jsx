@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="app ">
         <Header />
-        <div className="row h-100">
+        <div className="row h-100 ">
           <nav className="col-2 main-nav" style={{ maxWidth: "250px", height: "100vh" }}>
             <SideNav />
           </nav>

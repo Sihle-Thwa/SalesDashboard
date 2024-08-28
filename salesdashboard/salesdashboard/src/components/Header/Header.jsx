@@ -57,16 +57,18 @@ function Header() {
           </li>
         </ul>
 
-        <div className="dropdown justify-content-end">
+        <div className="dropdown d-inline-block ">
           <button
             className="btn btn-secondary btn-sm dropdown-toggle bg-white text-dark"
+            aria-haspopup="true"
             role="button"
-            data-bs-toggle="dropdown"
+            data-toggle="dropdown"
             aria-expanded="false"
             id="dropDownMenuProfile"
+
           >
             <img
-              src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
+              src=""
               alt=""
               width="24"
               height="24"
@@ -74,7 +76,7 @@ function Header() {
             />
             <strong>Siphesihle</strong>
           </button>
-          <ul className="dropdown-menu" aria-labelledby="dropDownMenuProfile">
+          <ul className="dropdown-menu position-absolute" aria-labelledby="dropDownMenuProfile">
             {dropdownItems.map((item) => (
               <li key={item.href}>
                 <a className="dropdown-item" href={item.href}>
