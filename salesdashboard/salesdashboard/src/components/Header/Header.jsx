@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsGear, BsBell } from "react-icons/bs";
 import NotificationsModal from "../../components/Modals/NotificationsModal";
 import ProfileModal from "../Modals/ProfileModal";
@@ -24,23 +24,38 @@ function Header() {
     setShowProfileMenu(false);
   }
 
+  useEffect(() => {
+    const handleWindowClick = (event) => {
+      if (showNotifications || showProfileMenu) {
+        if (!event.target.closest('.notification-modal') && !event.target.closest('.profile-menu')) {
+          setShowNotifications(false);
+          setShowProfileMenu(false);
+        }
+      }
+    };
+  
+    window.addEventListener('click', handleWindowClick);
+  
+    return () => {
+      window.removeEventListener('click', handleWindowClick);
+    };
+  }, [showNotifications, showProfileMenu]);
 
   return (
     <nav className="navbar navbar-expand-lg bg-white text-dark border-bottom">
       <button
         className="navbar-toggler"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        aria-haspopup="true"
         aria-expanded="false"
-        aria-label="Toggle navigation"
+        data-toggle="dropdown"
+        style={{cursor:"pointer"}}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
       <div
         className="collapse navbar-collapse justify-content-end"
-        id="navbarSupportedContent"
+        id=""
       >
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -91,17 +106,17 @@ function Header() {
             <strong>Siphesihle</strong>
           </button>
           {showProfileMenu && (
-            <div
-              className="position-absolute notification-modal"
-              style={{
-                top: "50px",
-                right: "20px",
-                zIndex: 1000,
-              }}
-            >
-              <ProfileModal onClose={handleProfileMenuClose} />
-            </div>
-          )}
+  <div
+    className="position-absolute profile-menu"
+    style={{
+      top: "50px",
+      right: "20px",
+      zIndex: 1000,
+    }}
+  >
+    <ProfileModal onClose={handleProfileMenuClose} />
+  </div>
+)}
           
           
         </div>
