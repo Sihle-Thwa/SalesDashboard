@@ -4,6 +4,7 @@ import NotificationsModal from "../../components/Modals/NotificationsModal";
 import ProfileModal from "../Modals/ProfileModal";
 import './header.css'
 
+
 function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -27,7 +28,7 @@ function Header() {
   useEffect(() => {
     const handleWindowClick = (event) => {
       if (showNotifications || showProfileMenu) {
-        if (!event.target.closest('.notification-modal') && !event.target.closest('.profile-menu')) {
+        if (!event.target.closest('.notification-modal') && !event.target.closest('.profile-modal')) {
           setShowNotifications(false);
           setShowProfileMenu(false);
         }

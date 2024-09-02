@@ -1,10 +1,11 @@
 .profile-widget {
-    width: 350px !important;
+    width: 22rem !important;
     font-size: medium;
     text-align: left !important;
     list-style: none !important;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: .25rem ;
+    min-width: 18rem !important;
     
 }
 
@@ -14,8 +15,3 @@
     padding: 1px !important; 
 }
 
-.profile-widget .card-header {
-    flex-wrap: nowrap !important;
-    background: #337ab7;
-    color: white;
-}

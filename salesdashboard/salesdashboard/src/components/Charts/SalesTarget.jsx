@@ -13,12 +13,11 @@ import data from "../../Data/SalesVsTarget.json";
 function SalesTarget() {
   return (
     <div className="card">
-      <div className="card-header">
-        <div className="card-title">
+      
+      <div className="card-body">
+      <div className="card-title">
           <h5>Sales Vs Target</h5>
         </div>
-      </div>
-      <div className="card-body">
         <ResponsiveContainer width="100%" height={250}>
           <LineChart
             data={data} // access the array of objects within the data object

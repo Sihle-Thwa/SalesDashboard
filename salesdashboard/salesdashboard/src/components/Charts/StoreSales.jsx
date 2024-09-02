@@ -13,12 +13,10 @@ import data from "../../Data/StoreSales.json";
 function StoreSales() {
   return (
     <div className="card">
-      <div className="card-header">
-        <div className="card-title">
+      <div className="card-body">
+      <div className="card-title">
           <h5>Sales Per Store</h5>
         </div>
-      </div>
-      <div className="card-body">
         <ResponsiveContainer width="100%" height={250}>
           <BarChart
             width={500}
