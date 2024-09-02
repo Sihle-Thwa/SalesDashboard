@@ -1,25 +1,37 @@
-<button
-            className="btn btn-secondary btn-sm dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            id="dropDownMenuProfile"
-          >
-            <img
-              src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
-              alt=""
-              width="24"
-              height="24"
-              className="rounded-circle me-2"
-            />
-            <strong>S.Mthethwa</strong>
-            <ul className="dropdown-menu" aria-labelledby="dropDownMenuProfile">
-              {dropdownItems.map((item) => (
-                <li key={item.href}>
-                  <a className="dropdown-item" href={item.href}>
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </button>
+
+
+//#region upload user profile image feature
+  //const [profileImg, setProfileImg] = useState(null); // Add a state to store the uploaded image
+  //const [uploading, setUploading] = useState(false); // Add a state to track the uploading process
+
+  //const handleUploadImage = (event) => {
+    //setUploading(true);
+    //const file = event.target.files[0];
+    //const reader = new FileReader();
+    //reader.onloadend = () => {
+      //setProfileImg(reader.result);
+      //setUploading(false);
+    //};
+    //reader.readAsDataURL(file);
+  //};
+
+  //const handleRemoveImage = () => {
+    //setProfileImg(null);
+  //}; 
+  //##end region 
+
+
+  const handleUploadImage = (event) => {
+    setUploading(true);
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setProfileImg(reader.result);
+      setUploading(false);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleRemoveImage = () => {
+    setProfileImg(null);
+  };

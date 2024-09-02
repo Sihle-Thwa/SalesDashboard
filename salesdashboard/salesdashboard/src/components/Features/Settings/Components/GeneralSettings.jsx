@@ -1,3 +1,5 @@
+import profileImg from "../../../../assets/avi.jpg";
+
 function GeneralSettings() {
   return (
     <div className="container-wrapper vh-75">
@@ -11,22 +13,22 @@ function GeneralSettings() {
       </div>
       <div className="row ">
         <div className="col p-2 ">
-          <img
-            src="https://www.flaticon.com/free-icon/profile_3135715?term=user+avatar&related_id=3135715"
-            alt=""
-            width="75"
-            height="75"
-            className="rounded-circle me-2"
-          />
+        <img
+              src={profileImg}
+              alt=""
+              width="100"
+              height="100"
+              className="rounded-circle "
+            />
         </div>
         <div className="col p-2 md-6 col-lg-2">
-          <button className="btn btn-primary w-100  ">
+          <button className="btn btn-primary w-100 form-control " type="file" id="formFile">
             <small> Upload new</small>
           </button>
         </div>
         <div className="col p-2 md-6 col-lg-2">
           <button className="btn btn-light w-100 ">
-            <small>Delete</small>
+            <small>Remove</small>
           </button>
         </div>
       </div>
