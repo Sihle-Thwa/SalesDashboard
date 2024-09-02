@@ -7,7 +7,7 @@ import { addDays } from 'date-fns';
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const DateRangeComponent = () => {
   const [range, setRange] = useState([
@@ -55,7 +55,7 @@ const DateRangeComponent = () => {
   return (
     <div className="calendarWrap">
       <input
-        value={`${format(range[0].startDate, 'dd/MM/yyyy')} to ${format(range[0].endDate, 'dd/MM/yyyy')}`}
+        value={`${format(range[0].startDate, 'dd/MMM')} - ${format(range[0].endDate, 'dd/MMM/yyyy')}`}
         readOnly
         className="inputBox"
         onClick={toggleModal}
