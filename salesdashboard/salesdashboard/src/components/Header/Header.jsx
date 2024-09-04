@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { BsGear, BsBell } from "react-icons/bs";
 import NotificationsModal from "../../components/Modals/NotificationsModal";
 import ProfileModal from "../Modals/ProfileModal";
-import './header.css'
+import profileImg from "../../assets/avi.jpg";
 
+import "./header.css";
 
 function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
@@ -23,22 +24,25 @@ function Header() {
 
   const handleProfileMenuClose = () => {
     setShowProfileMenu(false);
-  }
+  };
 
   useEffect(() => {
     const handleWindowClick = (event) => {
       if (showNotifications || showProfileMenu) {
-        if (!event.target.closest('.notification-modal') && !event.target.closest('.profile-modal')) {
+        if (
+          !event.target.closest(".notification-modal") &&
+          !event.target.closest(".profile-modal")
+        ) {
           setShowNotifications(false);
           setShowProfileMenu(false);
         }
       }
     };
-  
-    window.addEventListener('click', handleWindowClick);
-  
+
+    window.addEventListener("click", handleWindowClick);
+
     return () => {
-      window.removeEventListener('click', handleWindowClick);
+      window.removeEventListener("click", handleWindowClick);
     };
   }, [showNotifications, showProfileMenu]);
 
@@ -50,18 +54,14 @@ function Header() {
         aria-haspopup="true"
         aria-expanded="false"
         data-toggle="dropdown"
-        style={{cursor:"pointer"}}
+        style={{ cursor: "pointer" }}
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div
-        className="collapse navbar-collapse justify-content-end"
-        id=""
-      >
+      <div className="collapse navbar-collapse justify-content-end" id="">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" onClick={handleNotificationsOpen}
-            >
+            <a className="nav-link" onClick={handleNotificationsOpen}>
               <BsBell />
               Notifications
             </a>
@@ -93,12 +93,10 @@ function Header() {
             role="button"
             data-toggle="dropdown"
             aria-expanded="false"
-            
             onClick={handleProfileMenuOpen}
-
           >
             <img
-              src=""
+              src={profileImg}
               alt=""
               width="24"
               height="24"
@@ -107,25 +105,21 @@ function Header() {
             <strong>Siphesihle</strong>
           </button>
           {showProfileMenu && (
-  <div
-    className="position-absolute profile-menu"
-    style={{
-      top: "50px",
-      right: "20px",
-      zIndex: 1000,
-    }}
-  >
-    <ProfileModal onClose={handleProfileMenuClose} />
-  </div>
-)}
-          
-          
+            <div
+              className="position-absolute profile-menu"
+              style={{
+                top: "50px",
+                right: "20px",
+                zIndex: 1000,
+              }}
+            >
+              <ProfileModal onClose={handleProfileMenuClose} />
+            </div>
+          )}
         </div>
       </div>
     </nav>
   );
 }
-
-
 
 export default Header;
